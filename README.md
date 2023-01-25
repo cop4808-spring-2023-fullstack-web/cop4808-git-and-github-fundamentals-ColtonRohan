@@ -1,4 +1,4 @@
-## Colton Rohan
+## Colton Rohan.
 
 # :wave: The Basics of GitHub
 
