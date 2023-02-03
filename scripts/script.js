@@ -25,17 +25,20 @@ function clickButton() {
   for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function () {
       if (buttons[i].classList.contains("operand")) {
-        console.log(buttons[i].value);
         inputOperand(buttons[i].value);
         updateDisplay();
       } else if (buttons[i].classList.contains("operator")) {
-        console.log(buttons[i].value);
         inputOperator(buttons[i].value);
       } else if (buttons[i].classList.contains("equals")) {
         inputEquals();
         updateDisplay();
       } else if (buttons[i].classList.contains("decimal")) {
         inputDecimal(buttons[i].value);
+        updateDisplay();
+        // this is where i added the power button
+      } else if (buttons[i].classList.contains("power")) {
+        console.log(displayValue);
+        inputPower(displayValue);
         updateDisplay();
       } else if (buttons[i].classList.contains("percent")) {
         inputPercent(displayValue);
@@ -83,7 +86,6 @@ function inputOperator(operator) {
       firstOperator
     );
     displayValue = roundAccurately(result, 15).toString();
-    console.log(displayValue);
     firstOperand = displayValue;
     result = null;
   } else if (firstOperator != null && secondOperator != null) {
@@ -146,6 +148,11 @@ function inputEquals() {
       result = null;
     }
   }
+}
+//Added my own funcitonality here
+function inputPower(pow) {
+  console.log(pow);
+  displayValue = Math.pow(pow, 2);
 }
 
 function inputDecimal(dot) {
