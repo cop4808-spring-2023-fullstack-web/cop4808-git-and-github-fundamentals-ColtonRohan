@@ -50,6 +50,7 @@ button {
 
 .operator-top {
   background-color: rgb(218, 3, 218);
+  font-weight: bold;
 }
 .power:active {
   background-color: rgb(151, 26, 151);

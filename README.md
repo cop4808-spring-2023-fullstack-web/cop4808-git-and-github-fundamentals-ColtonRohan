@@ -1,5 +1,9 @@
 ## Colton Rohan.
 
+# my gif
+
+![image]https://i.imgur.com/qFFSwqa.gif
+
 # :wave: The Basics of GitHub
 
 ## 🤓 Course overview and learning outcomes
