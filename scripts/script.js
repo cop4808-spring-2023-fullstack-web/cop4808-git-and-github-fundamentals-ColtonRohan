@@ -15,8 +15,6 @@ function updateDisplay() {
   const display = document.getElementById("display");
   display.innerText = displayValue;
   if (displayValue.length > 9) {
-    console.log("LENGHT: " + displayValue.length);
-    console.log(displayValue.substring(0, 9));
     display.innerText = displayValue.substring(0, 9);
   }
 }
@@ -30,7 +28,6 @@ function clickButton() {
         inputOperand(buttons[i].value);
         updateDisplay();
       } else if (buttons[i].classList.contains("operator")) {
-        console.log(buttons[i].value);
         inputOperator(buttons[i].value);
       } else if (buttons[i].classList.contains("equals")) {
         inputEquals();
@@ -40,21 +37,17 @@ function clickButton() {
         updateDisplay();
         // this is where i added the power button
       } else if (buttons[i].classList.contains("power")) {
-        console.log(displayValue);
         inputPower(displayValue);
         updateDisplay();
         //this is where i added the modulos button
       } else if (buttons[i].classList.contains("mod")) {
-        console.log(buttons[i].value);
         inputOperator(buttons[i].value);
         updateDisplay();
         // this is where i added my sqrt button
       } else if (buttons[i].classList.contains("sqrt")) {
-        console.log(buttons[i].value);
         inputSqrt(displayValue);
         updateDisplay();
       } else if (buttons[i].classList.contains("xPOWy")) {
-        console.log(buttons[i].value);
         inputOperator(buttons[i].value);
         updateDisplay();
       } else if (buttons[i].classList.contains("percent")) {
@@ -168,12 +161,10 @@ function inputEquals() {
 }
 //Added my own funcitonality here
 function inputPower(pow) {
-  console.log(pow);
   displayValue = Math.pow(pow, 2).toFixed(9);
 }
 
 function inputSqrt(sqrt) {
-  console.log(sqrt);
   displayValue = Math.sqrt(sqrt, 2).toFixed(9);
 }
 
@@ -213,9 +204,9 @@ function inputBackspace() {
 function operate(x, y, op) {
   if (op === "+") {
     return x + y;
-  } else if (op === "mod") {
+  } else if (op === "s") {
     return x % y;
-  } else if (op === "xPOWy") {
+  } else if (op === "f") {
     return Math.pow(x, y);
   } else if (op === "-") {
     return x - y;
