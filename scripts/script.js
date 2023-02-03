@@ -28,6 +28,7 @@ function clickButton() {
         inputOperand(buttons[i].value);
         updateDisplay();
       } else if (buttons[i].classList.contains("operator")) {
+        console.log(buttons[i].value);
         inputOperator(buttons[i].value);
       } else if (buttons[i].classList.contains("equals")) {
         inputEquals();
@@ -39,6 +40,11 @@ function clickButton() {
       } else if (buttons[i].classList.contains("power")) {
         console.log(displayValue);
         inputPower(displayValue);
+        updateDisplay();
+        //this is where i added the modulos button
+      } else if (buttons[i].classList.contains("Mod")) {
+        console.log(buttons[i].value);
+        inputOperator(buttons[i].value);
         updateDisplay();
       } else if (buttons[i].classList.contains("percent")) {
         inputPercent(displayValue);
@@ -191,6 +197,8 @@ function inputBackspace() {
 function operate(x, y, op) {
   if (op === "+") {
     return x + y;
+  } else if (op === "Mod") {
+    return x % y;
   } else if (op === "-") {
     return x - y;
   } else if (op === "*") {

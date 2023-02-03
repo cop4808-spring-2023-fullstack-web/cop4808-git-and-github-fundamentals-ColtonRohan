@@ -51,6 +51,9 @@ button {
 .operator-top {
   background-color: magenta;
 }
+.operator-top:active {
+  background-color: rgb(151, 26, 151);
+}
 
 #zero {
   grid-column: span 2;
