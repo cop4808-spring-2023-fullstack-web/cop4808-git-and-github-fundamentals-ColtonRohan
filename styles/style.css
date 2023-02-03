@@ -49,9 +49,18 @@ button {
 }
 
 .operator-top {
-  background-color: magenta;
+  background-color: rgb(218, 3, 218);
 }
-.operator-top:active {
+.power:active {
+  background-color: rgb(151, 26, 151);
+}
+.sqrt:active {
+  background-color: rgb(151, 26, 151);
+}
+.mod:focus {
+  background-color: rgb(151, 26, 151);
+}
+.xPOWy:focus {
   background-color: rgb(151, 26, 151);
 }
 
